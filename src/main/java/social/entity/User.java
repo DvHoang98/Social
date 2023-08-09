@@ -25,9 +25,6 @@ public class User implements Serializable{
     private String department;
     private String bio;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Collection<UserGroup> userGroupSet = new ArrayList<>();
-
     public User(String userName, String email, String fullName, String password, String department, String bio) {
         this.userName = userName;
         this.email = email;
